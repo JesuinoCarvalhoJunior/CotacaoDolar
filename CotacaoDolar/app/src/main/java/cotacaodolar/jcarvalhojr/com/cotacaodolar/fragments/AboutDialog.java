@@ -18,7 +18,7 @@ import cotacaodolar.jcarvalhojr.com.cotacaodolar.R;
 
 
 /**
- * Created by Junior_Carvalho on 26/03/2016.
+ * Created by Junior_Carvalho on 24/06/2018.
  */
 public class AboutDialog extends DialogFragment {
 

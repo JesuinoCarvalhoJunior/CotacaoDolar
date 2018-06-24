@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Dominio.Dados;
-
+/**
+ * Created by Junior_Carvalho on 24/06/2018.
+ */
 public class MainActivity extends Activity {
 
     private TextView txtCode;

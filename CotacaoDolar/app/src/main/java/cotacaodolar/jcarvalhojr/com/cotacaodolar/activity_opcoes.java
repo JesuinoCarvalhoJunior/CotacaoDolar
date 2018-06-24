@@ -16,7 +16,9 @@ import android.widget.TextView;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.CustomOnItemSelectedListener;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.ServiceTaskDadosJson;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.fragments.AboutDialog;
-
+/**
+ * Created by Junior_Carvalho on 24/06/2018.
+ */
 public class activity_opcoes extends AppCompatActivity {
 
     private RadioGroup radioGroup;
