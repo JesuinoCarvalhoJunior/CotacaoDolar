@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5d4037"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Code:" />
+        android:text="Code:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtCodeIn"
@@ -19,7 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtCode"
-        android:text="Code In:" />
+        android:text="Code In:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtName"
@@ -27,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtCodeIn"
-        android:text="Nome:" />
+        android:text="Nome:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtHigh"
@@ -35,7 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtName"
-        android:text="Máxima:" />
+        android:text="Máxima:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtLow"
@@ -43,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtHigh"
-        android:text="Mínima:" />
+        android:text="Mínima:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtPctChange"
@@ -51,7 +57,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtLow"
-        android:text="Percentual Variação:" />
+        android:text="Percentual Variação:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtOpen"
@@ -59,7 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtPctChange"
-        android:text="Abriu:" />
+        android:text="Abriu:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtBid"
@@ -67,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtOpen"
-        android:text="Compra:" />
+        android:text="Compra:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtAsk"
@@ -75,7 +84,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtBid"
-        android:text="Venda:" />
+        android:text="Venda:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtVarBid"
@@ -83,7 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtAsk"
-        android:text="Variação:" />
+        android:text="Variação:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtTimeStamp"
@@ -91,7 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVarBid"
-        android:text="timeStamp:" />
+        android:text="timeStamp:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtCreate_Date"
@@ -99,7 +111,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtTimeStamp"
-        android:text="Data:" />
+        android:text="Data:"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoCode"
@@ -108,7 +121,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="84dp"
-        android:text="txtDadoCode" />
+        android:text="txtDadoCode"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoCodeIn"
@@ -116,7 +130,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtCode"
-        android:text="txtDadoCodeIn" />
+        android:text="txtDadoCodeIn"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoNome"
@@ -124,7 +139,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtCodeIn"
-        android:text="txtDadoNome" />
+        android:text="txtDadoNome"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoAlta"
@@ -132,7 +148,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtName"
-        android:text="txtDadoAlta" />
+        android:text="txtDadoAlta"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoBaixa"
@@ -140,7 +157,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtHigh"
-        android:text="txtDadoBaixa" />
+        android:text="txtDadoBaixa"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoPercVar"
@@ -149,7 +167,8 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtLow"
         android:layout_marginStart="138dp"
-        android:text="txtDadoPercVar" />
+        android:text="txtDadoPercVar"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoAbriu"
@@ -157,7 +176,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtPctChange"
-        android:text="txtDadoAbriu" />
+        android:text="txtDadoAbriu"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoCompra"
@@ -165,7 +185,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtOpen"
-        android:text="txtDadoCompra" />
+        android:text="txtDadoCompra"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoVenda"
@@ -173,7 +194,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtBid"
-        android:text="txtDadoVenda" />
+        android:text="txtDadoVenda"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoVariacao"
@@ -181,7 +203,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtAsk"
-        android:text="txtDadoVariacao" />
+        android:text="txtDadoVariacao"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoTimeStamp"
@@ -189,7 +212,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtVarBid"
-        android:text="txtDadoTimeStamp" />
+        android:text="txtDadoTimeStamp"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoData"
@@ -197,6 +221,17 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
         android:layout_below="@+id/txtTimeStamp"
-        android:text="txtDadoData" />
+        android:text="txtDadoData"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:text="Refazer"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

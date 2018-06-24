@@ -1,11 +1,15 @@
 package cotacaodolar.jcarvalhojr.com.cotacaodolar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Dominio.Dados;
+
 /**
  * Created by Junior_Carvalho on 24/06/2018.
  */
@@ -37,6 +41,8 @@ public class MainActivity extends Activity {
     private TextView txtDadoTimeStamp;
     private TextView txtDadoData;
 
+    private Button btnInicio;
+
     private Dados dados;
 
 
@@ -47,6 +53,17 @@ public class MainActivity extends Activity {
 
         Inicializar();
         getDados();
+
+
+        btnInicio.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, activity_opcoes.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -60,7 +77,7 @@ public class MainActivity extends Activity {
         if (dados.getPctChange().contains("-")) {
             txtDadoPercVar.setTextColor(Color.rgb(255, 0, 4));
             txtDadoPercVar.setText(dados.getPctChange() + " %");
-        }else{
+        } else {
             txtDadoPercVar.setTextColor(Color.rgb(52, 205, 18));
             txtDadoPercVar.setText(dados.getPctChange() + " %");
         }
@@ -110,7 +127,7 @@ public class MainActivity extends Activity {
         txtDadoTimeStamp = (TextView) findViewById(R.id.txtDadoTimeStamp);
         txtDadoData = (TextView) findViewById(R.id.txtDadoData);
 
-
+        btnInicio = (Button) findViewById(R.id.btnInicio);
     }
 
 

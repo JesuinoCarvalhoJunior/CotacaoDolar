@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -29,6 +30,7 @@ import java.util.List;
 
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Dominio.Dados;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.MainActivity;
+import cotacaodolar.jcarvalhojr.com.cotacaodolar.R;
 
 
 public class ServiceTaskDadosJson extends ListActivity {
@@ -43,19 +45,21 @@ public class ServiceTaskDadosJson extends ListActivity {
         moeda = (String) getIntent().getSerializableExtra("moeda");
         QdadeRegistro = (String) getIntent().getSerializableExtra("QdadeRegistro");
 
-
-        if(moeda == ""){
+        if (moeda == "") {
             moeda = "USD-BRL";
         }
-        if(QdadeRegistro == ""){
+        if (QdadeRegistro == "") {
             QdadeRegistro = "1";
         }
 
-
-        new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/"+moeda+"/"+QdadeRegistro+"");
+        new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/" + moeda + "/" + QdadeRegistro + "");
         // new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/all");
+    }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
 
@@ -71,18 +75,16 @@ public class ServiceTaskDadosJson extends ListActivity {
     }
 
 
-
-
     class DownloadJsonAsyncTask extends AsyncTask<String, Void, List<Dados>> {
 
         ProgressDialog dialog;
 
-        //Exibe pop-up indicando que est� sendo feito o download do JSON
+        //Exibe pop-up indicando que esta sendo feito o download do JSON
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialog = ProgressDialog.show(ServiceTaskDadosJson.this, "Aguarde...",
-                    "Fazendo download do JSON");
+            dialog = ProgressDialog.show(ServiceTaskDadosJson.this, "Aguarde",
+                    "Recebendo dados...");
         }
 
         //Acessa o servico do JSON e retorna a lista de dados
@@ -125,7 +127,6 @@ public class ServiceTaskDadosJson extends ListActivity {
                 setListAdapter(adapter);
 
 
-
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ServiceTaskDadosJson.this)
                         .setTitle("Erro")
@@ -143,19 +144,15 @@ public class ServiceTaskDadosJson extends ListActivity {
             try {
 
                 JSONArray dadosJson = new JSONArray(jsonString);
-                // JSONObject objObtido;
                 JSONObject objObtido = new JSONObject();
 
                 for (int i = 0; i < dadosJson.length(); i++) {
-
-                    //JSONObject objObtido = new JSONObject(dado.getString(i));
 
                     objObtido = new JSONObject(dadosJson.getString(i));
 
                     Log.i("COTACAO: ", "name= " + objObtido.getString("name"));
 
                     Dados objetoDados = new Dados();
-
 
                     //  objetoDados.setIdReg(objObtido.getString("idReg"));
                     objetoDados.setCode(objObtido.getString("code"));
@@ -173,23 +170,6 @@ public class ServiceTaskDadosJson extends ListActivity {
 
                     dados.add(objetoDados);
 
-
-                    /*
-
-                    objetoDados.setIdReg(dado.getString("idReg"));
-                    objetoDados.setCode(dado.getString("code"));
-                    objetoDados.setCodeIn(dado.getString("CodeIn"));
-                    objetoDados.setName(dado.getString("name"));
-                    objetoDados.setHigh(dado.getString("high"));
-                    objetoDados.setLow(dado.getString("low"));
-                    objetoDados.setPctChange(dado.getString("pctChange"));
-                    objetoDados.setOpen(dado.getString("open"));
-                    objetoDados.setBid(dado.getString("bid"));
-                    objetoDados.setAsk(dado.getString("ask"));
-                    objetoDados.setVarBid(dado.getString("varBid"));
-                    objetoDados.setTimeStamp(dado.getString("timeStamp"));
-                    objetoDados.setCreate_Date(dado.getString("create_Date"));
-*/
                 }
 
             } catch (JSONException e) {

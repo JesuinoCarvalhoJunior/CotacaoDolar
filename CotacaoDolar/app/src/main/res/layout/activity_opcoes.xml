@@ -3,9 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
+    android:background="#5d4037"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/txtTitulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="137dp"
+        android:text="Exibir últimas cotações"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/radioGrupo"
@@ -13,14 +24,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="86dp"
-        android:background="#00ff15"
+        android:layout_marginTop="67dp"
+        android:background="#795548"
         android:text="RadioButton">
 
         <RadioButton
             android:id="@+id/rDolarComercial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/USD_BRL" />
 
         <RadioButton
@@ -67,14 +79,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="116dp"
-        android:background="#11ff00"
+        android:layout_marginBottom="101dp"
+        android:background="#795548"
         android:entries="@array/qdade_registro"
         android:prompt="@string/qdade_registro" />
 
     <Button
         android:id="@+id/btnOk"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -89,7 +101,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:text="Selecione uma moeda para cotação"
-        android:textColor="#11ff00"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
 </RelativeLayout>

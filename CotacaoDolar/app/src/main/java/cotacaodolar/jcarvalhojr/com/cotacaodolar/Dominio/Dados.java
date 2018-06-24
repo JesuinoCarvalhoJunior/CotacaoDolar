@@ -1,6 +1,7 @@
 package cotacaodolar.jcarvalhojr.com.cotacaodolar.Dominio;
 
 import java.io.Serializable;
+
 /**
  * Created by Junior_Carvalho on 24/06/2018.
  */
@@ -8,7 +9,7 @@ public class Dados implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-   // private String idReg;
+    // private String idReg;
     private String code;
     private String codeIn;
     private String name;
@@ -131,47 +132,9 @@ public class Dados implements Serializable {
 
     @Override
     public String toString() {
-        return code + "," + codeIn + "," + name +"," + high + ","  + low + "," + pctChange + "," + open  + ","
-                +  bid + "," + ask + "," + varBid  + "," + timeStamp  + "," + create_Date+ "]";
+        return code + "," + codeIn + "," + name + "," + high + "," + low + "," + pctChange + "," + open + ","
+                + bid + "," + ask + "," + varBid + "," + timeStamp + "," + create_Date + "]";
     }
-
-    /*@Override
-    public String toString() {
-        return "Dados [code=" + code + ", codeIn=" + codeIn
-                + ", name=" + name + ", high=" + high + ", low=" + low
-                + ", pctChange=" + pctChange + ", open=" + open
-                + ", bid=" + bid + ", ask=" + ask + ", varBid=" + varBid
-                + ", timeStamp=" + timeStamp + ", create_Date=" + create_Date
-
-
-                + "]";
-    }*/
-    /*
-    @Override
-    public String toString() {
-        return "Dados [idreg=" + idReg + ", code=" + code + ", codeIn=" + codeIn
-                + ", name=" + name + ", high=" + high + ", low=" + low
-                + ", pctChange=" + pctChange + ", open=" + open
-                + ", bid=" + bid + ", ask=" + ask + ", varBid=" + varBid
-                + ", timeStamp=" + timeStamp + ", create_Date=" + create_Date
-
-
-                + "]";
-    }*/
-/*
-    private String idreg;
-    private String code;
-    private String codein;
-    private String name;
-    private String high;
-    private String low;
-    private String pctChange;
-    private String open;
-    private String bid;
-    private String ask;
-    private String varBid;
-    private String timestamp;
-    private String create_date;*/
 
 
 }

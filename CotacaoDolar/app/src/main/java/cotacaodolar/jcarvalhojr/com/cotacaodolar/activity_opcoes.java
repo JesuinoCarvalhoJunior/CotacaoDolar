@@ -16,6 +16,7 @@ import android.widget.TextView;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.CustomOnItemSelectedListener;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.ServiceTaskDadosJson;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.fragments.AboutDialog;
+
 /**
  * Created by Junior_Carvalho on 24/06/2018.
  */
@@ -32,13 +33,15 @@ public class activity_opcoes extends AppCompatActivity {
     private Button btnOk;
 
     private TextView txtTitulo;
-    private TextView textView4;
-
+    private TextView txtTitulo2;
 
     private String idQdadeRegistro;
     private String moeda = "";
 
+    private String TAG = "Tipo_Moeda";
+
     private Spinner spinnerResultados;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,38 +57,29 @@ public class activity_opcoes extends AppCompatActivity {
 
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                /*USD-BRL (Dólar Comercial)
-                USD-BRLT (Dólar Turismo)
-                CAD-BRL (Dólar Canadense)
-                EUR-BRL (Euro)
-                GBP-BRL (Libra Esterlina)
-                ARS-BRL (Peso Argentino)
-                BTC-BRL (Bitcoin)*/
-
                 if (checkedId == R.id.rDolarComercial) {
-
                     moeda = "USD-BRL";
-                    Log.v("USD-BRL", "Dolar Comercial");
+                    Log.v(TAG, "Dolar Comercial");
 
                 } else if (checkedId == R.id.rDolarTurismo) {
                     moeda = "USD-BRLT";
-                    Log.v("USD-BRLT", "Dolar Turismo");
+                    Log.v(TAG, "Dolar Turismo");
 
                 } else if (checkedId == R.id.rDolarCanadense) {
                     moeda = "CAD-BRL";
-                    Log.v("CAD-BRL", "Dolar Canadense");
+                    Log.v(TAG, "Dolar Canadense");
                 } else if (checkedId == R.id.rEuro) {
                     moeda = "EUR-BRL";
-                    Log.v("EUR-BRL", "Euro");
+                    Log.v(TAG, "Euro");
                 } else if (checkedId == R.id.rLibraEsterlina) {
                     moeda = "GBP-BRL";
-                    Log.v("GBP-BRL", "Libra Esterlina");
+                    Log.v(TAG, "Libra Esterlina");
                 } else if (checkedId == R.id.rPesoArgentino) {
                     moeda = "ARS-BRL";
-                    Log.v("ARS-BRL", "Peso Argentino");
+                    Log.v(TAG, "Peso Argentino");
                 } else if (checkedId == R.id.rBitcoin) {
                     moeda = "BTC-BRL";
-                    Log.v("BTC-BRL", "Bitcoin");
+                    Log.v(TAG, "Bitcoin");
                 }
             }
         });
@@ -115,7 +109,6 @@ public class activity_opcoes extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
                 idQdadeRegistro = String.valueOf(spinnerResultados.getSelectedItem());
                 Log.v("GBP-BRL", idQdadeRegistro);
 
@@ -138,10 +131,22 @@ public class activity_opcoes extends AppCompatActivity {
         moeda = "";
         radioGroup = (RadioGroup) findViewById(R.id.radioGrupo);
 
-        txtTitulo = (TextView) findViewById(R.id.txtTitulo);
+        int RadioSelecionado = radioGroup.getCheckedRadioButtonId();
 
+
+
+        txtTitulo = (TextView) findViewById(R.id.txtTitulo);
+        txtTitulo2 = (TextView) findViewById(R.id.txtTitulo2);
 
         USD_BRL = (RadioButton) findViewById(R.id.rDolarComercial);
+        USD_BRL = (RadioButton) findViewById(RadioSelecionado);
+        USD_BRL.setChecked(true);
+
+         if (USD_BRL.isChecked()){
+             moeda = "USD-BRL";
+         }
+
+
         USD_BRLT = (RadioButton) findViewById(R.id.rDolarTurismo);
         CAD_BRL = (RadioButton) findViewById(R.id.rDolarCanadense);
         EUR_BRL = (RadioButton) findViewById(R.id.rEuro);
@@ -151,5 +156,6 @@ public class activity_opcoes extends AppCompatActivity {
 
         spinnerResultados = (Spinner) findViewById(R.id.spinnerResultados);
         btnOk = (Button) findViewById(R.id.btnOk);
+
     }
 }

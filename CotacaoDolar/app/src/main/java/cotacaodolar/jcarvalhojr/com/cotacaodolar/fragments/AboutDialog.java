@@ -23,7 +23,6 @@ import cotacaodolar.jcarvalhojr.com.cotacaodolar.R;
 public class AboutDialog extends DialogFragment {
 
     // metodo utilitario para mostrar o dialog
-
     public static void showAbout(android.support.v4.app.FragmentManager fm) {
         FragmentTransaction ft = fm.beginTransaction();
         Fragment prev = fm.findFragmentByTag("dialog_about");
