@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RadioGroup
+        android:id="@+id/radioGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="RadioButton">
+
+        <RadioButton
+            android:id="@+id/rDolarComercial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/USD_BRL" />
+
+        <RadioButton
+            android:id="@+id/rDolarTurismo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/USD_BRLT" />
+
+        <RadioButton
+            android:id="@+id/rDolarCanadense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CAD_BR" />
+
+        <RadioButton
+            android:id="@+id/rEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/EUR_BRL" />
+
+        <RadioButton
+            android:id="@+id/rLibraEsterlina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/GBP_BRL" />
+
+        <RadioButton
+            android:id="@+id/rPesoArgentino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ARS_BRL" />
+
+        <RadioButton
+            android:id="@+id/rBitcoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BTC_BRL" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerResultados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="156dp"
+        android:entries="@array/qdade_registro"
+        android:prompt="@string/qdade_registro" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:text="Ok" />
+
+</RelativeLayout>

@@ -55,16 +55,24 @@ public class MainActivity extends Activity {
         txtDadoNome.setText(dados.getName());
         txtDadoAlta.setText(dados.getHigh());
         txtDadoBaixa.setText(dados.getLow());
-        txtDadoPercVar.setText(dados.getPctChange()+" %");
+        if (dados.getPctChange().contains("-")) {
+            txtDadoPercVar.setTextColor(Color.rgb(255, 0, 4));
+            txtDadoPercVar.setText(dados.getPctChange() + " %");
+        }else{
+            txtDadoPercVar.setTextColor(Color.rgb(52, 205, 18));
+            txtDadoPercVar.setText(dados.getPctChange() + " %");
+        }
         txtDadoAbriu.setText(dados.getOpen());
         txtDadoCompra.setText(dados.getBid());
         txtDadoVenda.setText(dados.getAsk());
-        if(dados.getVarBid().contains("-")){
-            txtDadoVariacao.setTextColor(Color.rgb(255,0,4));
+        if (dados.getVarBid().contains("-")) {
+            txtDadoVariacao.setTextColor(Color.rgb(255, 0, 4));
+            txtDadoVariacao.setText(dados.getVarBid());
+        } else {
+            txtDadoVariacao.setTextColor(Color.rgb(52, 205, 18));
             txtDadoVariacao.setText(dados.getVarBid());
         }
-        txtDadoVariacao.setTextColor(Color.rgb(52,205,18));
-        txtDadoVariacao.setText(dados.getVarBid());
+
         txtDadoTimeStamp.setText(dados.getTimeStamp());
         txtDadoData.setText(dados.getCreate_Date());
 

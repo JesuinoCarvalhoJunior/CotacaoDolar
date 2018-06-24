@@ -33,11 +33,28 @@ import cotacaodolar.jcarvalhojr.com.cotacaodolar.MainActivity;
 
 public class ServiceTaskDadosJson extends ListActivity {
 
+    private String moeda;
+    private String QdadeRegistro;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/USD-BRL/30");
+
+        moeda = (String) getIntent().getSerializableExtra("moeda");
+        QdadeRegistro = (String) getIntent().getSerializableExtra("QdadeRegistro");
+
+
+        if(moeda == ""){
+            moeda = "USD-BRL";
+        }
+        if(QdadeRegistro == ""){
+            QdadeRegistro = "1";
+        }
+
+
+        new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/"+moeda+"/"+QdadeRegistro+"");
         // new DownloadJsonAsyncTask().execute("https://economia.awesomeapi.com.br/all");
+
 
     }
 
@@ -52,6 +69,9 @@ public class ServiceTaskDadosJson extends ListActivity {
         intent.putExtra("dados", dados);
         startActivity(intent);
     }
+
+
+
 
     class DownloadJsonAsyncTask extends AsyncTask<String, Void, List<Dados>> {
 

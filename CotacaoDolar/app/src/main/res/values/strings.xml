@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">CotacaoDolar</string>
+
+
+    <string name="USD_BRL">Dólar Comercial</string>
+    <string name="USD_BRLT">Dólar Turismo</string>
+    <string name="CAD_BR">Dólar Canadense</string>
+    <string name="EUR_BRL">Euro</string>
+    <string name="GBP_BRL">Libra Esterlina</string>
+    <string name="ARS_BRL">Peso Argentino</string>
+    <string name="BTC_BRL">Bitcoin</string>
+
+
+    <string name="qdade_registro">Últimos resultados</string>
+    <string-array name="qdade_registro">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>50</item>
+        <item>60</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
 </resources>
