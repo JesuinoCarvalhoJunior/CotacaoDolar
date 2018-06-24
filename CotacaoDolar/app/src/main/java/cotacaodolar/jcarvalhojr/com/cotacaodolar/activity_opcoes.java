@@ -1,19 +1,23 @@
 package cotacaodolar.jcarvalhojr.com.cotacaodolar;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.CustomOnItemSelectedListener;
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Servico.ServiceTaskDadosJson;
+import cotacaodolar.jcarvalhojr.com.cotacaodolar.fragments.AboutDialog;
 
-public class activity_opcoes extends Activity {
+public class activity_opcoes extends AppCompatActivity {
 
     private RadioGroup radioGroup;
     private RadioButton USD_BRL;
@@ -24,6 +28,10 @@ public class activity_opcoes extends Activity {
     private RadioButton ARS_BRL;
     private RadioButton BTC_BRL;
     private Button btnOk;
+
+    private TextView txtTitulo;
+    private TextView textView4;
+
 
     private String idQdadeRegistro;
     private String moeda = "";
@@ -77,14 +85,26 @@ public class activity_opcoes extends Activity {
                     moeda = "BTC-BRL";
                     Log.v("BTC-BRL", "Bitcoin");
                 }
-
             }
-
         });
-
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_about) {
+            AboutDialog.showAbout(getSupportFragmentManager());
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     // get the selected dropdown list value
     public void addListenerOnButton() {
@@ -94,16 +114,7 @@ public class activity_opcoes extends Activity {
             @Override
             public void onClick(View v) {
 
-
- /*               Toast.makeText(activity_opcoes.this,
-                        "OnClickListener : " +
-                                "\nSpinner : " + String.valueOf(spinnerResultados.getSelectedItem()),
-                        Toast.LENGTH_SHORT).show();*/
-
-
-
                 idQdadeRegistro = String.valueOf(spinnerResultados.getSelectedItem());
-
                 Log.v("GBP-BRL", idQdadeRegistro);
 
                 Intent intent = new Intent(activity_opcoes.this, ServiceTaskDadosJson.class);
@@ -111,8 +122,6 @@ public class activity_opcoes extends Activity {
                 intent.putExtra("QdadeRegistro", idQdadeRegistro);
                 startActivity(intent);
             }
-
-
         });
     }
 
@@ -124,10 +133,11 @@ public class activity_opcoes extends Activity {
 
 
     public void Inicializar() {
-
         moeda = "";
-
         radioGroup = (RadioGroup) findViewById(R.id.radioGrupo);
+
+        txtTitulo = (TextView) findViewById(R.id.txtTitulo);
+
 
         USD_BRL = (RadioButton) findViewById(R.id.rDolarComercial);
         USD_BRLT = (RadioButton) findViewById(R.id.rDolarTurismo);
