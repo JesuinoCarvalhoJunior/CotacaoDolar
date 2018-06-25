@@ -57,7 +57,6 @@ public class MainActivity extends Activity {
         Inicializar();
         getDados();
 
-
         btnInicio.setOnClickListener(new View.OnClickListener() {
 
             @Override
