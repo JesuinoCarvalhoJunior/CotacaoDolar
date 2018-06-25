@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import cotacaodolar.jcarvalhojr.com.cotacaodolar.Dominio.Dados;
@@ -21,11 +22,11 @@ public class MainActivity extends Activity {
     private TextView txtHigh;
     private TextView txtLow;
     private TextView txtPctChange;
-    private TextView txtOpen;
+   // private TextView txtOpen;
     private TextView txtBid;
     private TextView txtAsk;
     private TextView txtVarBid;
-    private TextView txtTimeStamp;
+  //  private TextView txtTimeStamp;
     private TextView txtCreate_Date;
 
     private TextView txtDadoCode;
@@ -43,6 +44,8 @@ public class MainActivity extends Activity {
 
     private Button btnInicio;
 
+    private ImageView ivIdicadorPositivo;
+    private ImageView ivIndicadorNegativo;
     private Dados dados;
 
 
@@ -77,9 +80,17 @@ public class MainActivity extends Activity {
         if (dados.getPctChange().contains("-")) {
             txtDadoPercVar.setTextColor(Color.rgb(255, 0, 4));
             txtDadoPercVar.setText(dados.getPctChange() + " %");
+
+            ivIndicadorNegativo.setVisibility(View.VISIBLE);
+            ivIdicadorPositivo.setVisibility(View.GONE);
+
         } else {
             txtDadoPercVar.setTextColor(Color.rgb(52, 205, 18));
             txtDadoPercVar.setText(dados.getPctChange() + " %");
+
+            ivIdicadorPositivo.setVisibility(View.VISIBLE);
+            ivIndicadorNegativo.setVisibility(View.GONE);
+
         }
         txtDadoAbriu.setText(dados.getOpen());
         txtDadoCompra.setText(dados.getBid());
@@ -106,11 +117,11 @@ public class MainActivity extends Activity {
         txtHigh = (TextView) findViewById(R.id.txtHigh);
         txtLow = (TextView) findViewById(R.id.txtLow);
         txtPctChange = (TextView) findViewById(R.id.txtPctChange);
-        txtOpen = (TextView) findViewById(R.id.txtOpen);
+      //  txtOpen = (TextView) findViewById(R.id.txtOpen);
         txtBid = (TextView) findViewById(R.id.txtBid);
         txtAsk = (TextView) findViewById(R.id.txtAsk);
         txtVarBid = (TextView) findViewById(R.id.txtVarBid);
-        txtTimeStamp = (TextView) findViewById(R.id.txtTimeStamp);
+       // txtTimeStamp = (TextView) findViewById(R.id.txtTimeStamp);
         txtCreate_Date = (TextView) findViewById(R.id.txtCreate_Date);
 
 
@@ -120,14 +131,17 @@ public class MainActivity extends Activity {
         txtDadoAlta = (TextView) findViewById(R.id.txtDadoAlta);
         txtDadoBaixa = (TextView) findViewById(R.id.txtDadoBaixa);
         txtDadoPercVar = (TextView) findViewById(R.id.txtDadoPercVar);
-        txtDadoAbriu = (TextView) findViewById(R.id.txtDadoAbriu);
+     //   txtDadoAbriu = (TextView) findViewById(R.id.txtDadoAbriu);
         txtDadoCompra = (TextView) findViewById(R.id.txtDadoCompra);
         txtDadoVenda = (TextView) findViewById(R.id.txtDadoVenda);
         txtDadoVariacao = (TextView) findViewById(R.id.txtDadoVariacao);
-        txtDadoTimeStamp = (TextView) findViewById(R.id.txtDadoTimeStamp);
+      //  txtDadoTimeStamp = (TextView) findViewById(R.id.txtDadoTimeStamp);
         txtDadoData = (TextView) findViewById(R.id.txtDadoData);
 
         btnInicio = (Button) findViewById(R.id.btnInicio);
+
+        ivIdicadorPositivo = (ImageView) findViewById(R.id.ivIndicadorPositivo);
+        ivIndicadorNegativo = (ImageView) findViewById(R.id.ivIndicadorNegativo);
     }
 
 
