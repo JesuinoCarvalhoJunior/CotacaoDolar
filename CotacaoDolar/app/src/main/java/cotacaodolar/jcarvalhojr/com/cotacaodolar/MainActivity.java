@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
             ivIndicadorNegativo.setVisibility(View.GONE);
 
         }
-        txtDadoAbriu.setText(dados.getOpen());
+       // txtDadoAbriu.setText(dados.getOpen());
         txtDadoCompra.setText(dados.getBid());
         txtDadoVenda.setText(dados.getAsk());
         if (dados.getVarBid().contains("-")) {
@@ -102,7 +102,7 @@ public class MainActivity extends Activity {
             txtDadoVariacao.setText(dados.getVarBid());
         }
 
-        txtDadoTimeStamp.setText(dados.getTimeStamp());
+       // txtDadoTimeStamp.setText(dados.getTimeStamp());
         txtDadoData.setText(dados.getCreate_Date());
 
     }

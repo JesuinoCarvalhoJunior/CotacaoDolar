@@ -102,20 +102,11 @@
         android:textColor="@android:color/white" />
 
     <TextView
-        android:id="@+id/txtOpen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtPctChange"
-        android:text="Abriu:"
-        android:textColor="@android:color/white" />
-
-    <TextView
         android:id="@+id/txtBid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtOpen"
+        android:layout_below="@+id/txtVarBid"
         android:text="Compra:"
         android:textColor="@android:color/white" />
 
@@ -133,25 +124,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtAsk"
+        android:layout_below="@+id/txtPctChange"
         android:text="Variação:"
         android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/txtTimeStamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtVarBid"
-        android:text="timeStamp:"
-        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtCreate_Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtTimeStamp"
+        android:layout_below="@+id/txtAsk"
         android:text="Data / Hora:"
         android:textColor="@android:color/white" />
 
@@ -207,25 +190,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtLow"
-        android:layout_marginStart="153dp"
+        android:layout_marginStart="154dp"
         android:text="txtDadoPercVar"
         android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/txtDadoAbriu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtDadoCode"
-        android:layout_below="@+id/txtPctChange"
-        android:text="txtDadoAbriu"
-        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoCompra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
-        android:layout_below="@+id/txtOpen"
+        android:layout_alignTop="@+id/txtBid"
         android:text="txtDadoCompra"
         android:textColor="@android:color/white" />
 
@@ -242,26 +217,19 @@
         android:id="@+id/txtDadoVariacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtDadoCode"
-        android:layout_below="@+id/txtAsk"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtPctChange"
+        android:layout_marginStart="154dp"
         android:text="txtDadoVariacao"
         android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/txtDadoTimeStamp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtDadoCode"
-        android:layout_below="@+id/txtVarBid"
-        android:text="txtDadoTimeStamp"
-        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/txtDadoData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtDadoCode"
-        android:layout_below="@+id/txtTimeStamp"
+        android:layout_below="@+id/txtAsk"
         android:text="txtDadoData"
         android:textColor="@android:color/white" />
 
