@@ -129,12 +129,28 @@ public class Dados implements Serializable {
         this.create_Date = create_Date;
     }
 
-
-    @Override
+// Lista sem formatacao
+  /*  @Override
     public String toString() {
         return code + "," + codeIn + "," + name + "," + high + "," + low + "," + pctChange + "," + open + ","
                 + bid + "," + ask + "," + varBid + "," + timeStamp + "," + create_Date + "]";
-    }
+    }*/
 
+// Lista formatada
+    @Override
+    public String toString() {
+        return "Cód. externo: " + getCode()
+                + "\nCód. interno " + getCodeIn()
+                + "\nNome da moeda: " + getName()
+                + "\nMáxima: " + getHigh()
+                + "\nMínima: " + getLow()
+                + "\nPerc. de variação: " + getPctChange() +"%"
+                + "\nAbertura: " + getOpen()
+                +"\nVAriação: " + getBid()
+                + "\nCompra: " + getAsk()
+                + "\nVenda: " + getVarBid()
+                + "\nTimeStamp: " + getTimeStamp()
+                + "\nData/Hora: " + getCreate_Date();
+    }
 
 }
