@@ -144,9 +144,9 @@ public class Dados implements Serializable {
                 + "\nNome da moeda: " + getName()
                 + "\nMáxima: " + getHigh()
                 + "\nMínima: " + getLow()
-                + "\nPerc. de variação: " + getPctChange() +"%"
+                + "\nPerc. de variação: " + getPctChange() +" %"
                 + "\nAbertura: " + getOpen()
-                +"\nVAriação: " + getBid()
+                +"\nVariação: " + getBid()
                 + "\nCompra: " + getAsk()
                 + "\nVenda: " + getVarBid()
                 + "\nTimeStamp: " + getTimeStamp()

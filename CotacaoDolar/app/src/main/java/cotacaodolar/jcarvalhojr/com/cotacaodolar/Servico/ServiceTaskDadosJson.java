@@ -117,7 +117,9 @@ public class ServiceTaskDadosJson extends ListActivity {
         @Override
         protected void onPostExecute(List<Dados> result) {
             super.onPostExecute(result);
-            dialog.dismiss();
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
 
             if (result.size() > 0) {
 
